@@ -2363,7 +2363,7 @@ a.btn-line {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   padding: 3px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-right: 40px;
   text-transform: uppercase;
   display: inline-block;
@@ -6515,6 +6515,12 @@ footer.style-2 {
 
 .guests-n-rooms .d-col{
   position: relative;
+}
+
+.guests-n-rooms-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* de-number begin */
