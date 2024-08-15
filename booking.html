@@ -179,7 +179,7 @@
                                 
                                             <div class="guests-n-rooms">
                                                 <div class="row">
-                                                    <div class="col-md-6 guests-n-rooms-flex">
+                                                    <div class="col-md-4">
                                                         <h4>Adult</h4>
                                                         <div class="de-number">
                                                             <span class="d-minus">-</span>
@@ -187,11 +187,19 @@
                                                             <span class="d-plus">+</span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 guests-n-rooms-flex">
+                                                    <div class="col-md-4">
                                                         <h4>Children</h4>
                                                         <div class="de-number">
                                                             <span class="d-minus">-</span>
                                                             <input type="text" id="children-count" value="0">
+                                                            <span class="d-plus">+</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <h4>Room</h4>
+                                                        <div id="d-room-count" class="de-number">
+                                                            <span class="d-minus">-</span>
+                                                            <input id="room-count" type="text" value="1">
                                                             <span class="d-plus">+</span>
                                                         </div>
                                                     </div>
@@ -246,8 +254,6 @@
                                     </div>
                                 </form>
                                 
-                               
-                                
                                 <div id='success_message' class='success'>Your reservation has been sent successfully.</div>
                                 <div id='error_message' class='error'>Sorry, error occured this time sending your message.</div>
                             </div>
@@ -291,6 +297,7 @@
                 const date = document.getElementById('date-picker').value;
                 const adults = document.getElementById('adult-count').value;
                 const children = document.getElementById('children-count').value;
+                const rooms = document.getElementById('room-count').value;
                 const roomType = document.getElementById('room-type').value;
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
