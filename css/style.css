@@ -1056,8 +1056,8 @@ header:not(.header-mobile):not(.force-header-mobile)
 /*#mo-menu.mm-style-2 > li > a:hover {
   -webkit-text-stroke-color: rgba(255, 255, 255, 1);
   transform: scale(1.2);
-  color: #ffffff;*/
-}
+  color: #ffffff;
+}*/
 #mo-menu.mm-style-2 li.mo-parent li{
   font-size: 24px;
   line-height: 32px;
@@ -1317,7 +1317,7 @@ footer a {
 }
 
 footer a:visited {
-  color: #ccc;
+  color: #CA8E46;
 }
 
 footer.light {
