@@ -10709,6 +10709,7 @@ header .d-extra{
   justify-content: center;
   list-style-type: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 .menu-nav ul li {
@@ -10719,19 +10720,6 @@ header .d-extra{
   position: relative;
   font-size: 20px;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-}
-
-.menu-nav ul li::after {
-  content: "~";
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
-  color: #CA8E46;
-}
-
-.menu-nav ul li:last-child::after {
-  content: "";
 }
 
 .menu-items {
@@ -10789,6 +10777,9 @@ header .d-extra{
       flex-direction: column;
       align-items: center;
   }
+  .menu-section {
+    width: 90%;
+  }
 
   .menu-nav ul li {
       margin: 5px 0;
@@ -10796,16 +10787,13 @@ header .d-extra{
   }
 
   .menu-item {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      display: flex;
+      align-items: center;
   }
 
   .menu-item img {
       margin-bottom: 10px;
-  }
-
-  .price {
-      align-self: flex-end;
   }
 }
 
