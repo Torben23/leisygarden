@@ -49,8 +49,10 @@
                                                 <li><a href="02-index.html">Fullscreen Slider</a></li>
                                                 <li><a href="02-index-slider-2.html">Fullscreen Slider 2</a></li>
                                                 <li><a href="02-index-slider-3.html">Fullscreen Slider 3</a></li>
+                                                <li><a href="02-index-full-page.html">Full Page</a></li>
                                                 <li><a href="02-index-video-background.html">Fullsreen Video</a></li>
                                                 <li><a href="02-index-room-slider-1.html">New: Room Slider 1</a></li>
+                                                <li><a href="02-index-snowy.html">New: Slider + Snow</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="02-about.html">About</a></li>
@@ -63,7 +65,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="02-booking.html">Booking</a></li>
-                                        <li><a href="02-offer.html">Offers</a></li>
+                                        <li><a href="02-offer.html">Menu</a></li>
                                         <li><a href="02-blog.html">Blog</a></li>
                                         <li><a href="02-gallery.html">Gallery</a></li>
                                         <li><a href="02-contact.html">Contact</a></li>
@@ -111,8 +113,10 @@
                                                 <li><a href="02-index.html">Fullscreen Slider</a></li>
                                                 <li><a href="02-index-slider-2.html">Fullscreen Slider 2</a></li>
                                                 <li><a href="02-index-slider-3.html">Fullscreen Slider 3</a></li>
+                                                <li><a href="02-index-full-page.html">Full Page</a></li>
                                                 <li><a href="02-index-video-background.html">Fullsreen Video</a></li>
                                                 <li><a href="02-index-room-slider-1.html">New: Room Slider 1</a></li>
+                                                <li><a href="02-index-snowy.html">New: Slider + Snow</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="02-about.html">About</a></li>
@@ -125,7 +129,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="02-booking.html">Booking</a></li>
-                                        <li><a href="02-offer.html">Offers</a></li>
+                                        <li><a href="02-offer.html">Menu</a></li>
                                         <li><a href="02-blog.html">Blog</a></li>
                                         <li><a href="02-gallery.html">Gallery</a></li>
                                         <li><a href="02-contact.html">Contact</a></li>
@@ -198,7 +202,7 @@
 
                                         <div class="spacer-single"></div>
 
-                                        <form name="contactForm" id='contact_form'>
+                                        <form name="contactForm" id='contact_form' method="post">
                                             <div class="row">
                                                 <div class="col-md-12 mb10">
                                                     <h3>Send Us Message</h3>
@@ -208,34 +212,35 @@
                                                     <div>
                                                         <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required>
                                                     </div>
-                                        
+
                                                     <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
                                                     <div>
                                                         <input type='email' name='Email' id='email' class="form-control" placeholder="Your Email" required>
                                                     </div>
-                                        
+
                                                     <div id='phone_error' class='error'>Please enter your phone number.</div>
                                                     <div>
                                                         <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                   
+                                                    <div id='message_error' class='error'>Please enter your message.</div>
                                                     <div>
                                                         <textarea name='message' id='message' class="form-control" placeholder="Your Message" required></textarea>
                                                     </div>
                                                 </div>
-                                        
+
                                                 <div class="col-md-12">
                                                     <div class="g-recaptcha" data-sitekey="copy-your-site-key-here"></div>
                                                     <p id='submit' class="mt20">
-                                                        <input type='button' id='send_message' value='Submit Form' class="btn btn-line">
+                                                        <input type='submit' id='send_message' value='Submit Form' class="btn btn-line">
                                                     </p>
                                                     <div id='mail_success' class='success'>Your message has been sent successfully.</div>
                                                     <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                                    
                                                 </div>
                                             </div>
-                                        </form>                                      
+                                        </form>
 
                                         <div id="success_message" class='success'>
                                             Your message has been sent successfully. Refresh this page if you want to send more messages.
@@ -262,7 +267,7 @@
                 <div class="subfooter">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-6">&copy; Copyright 2023 - Seaside Hotel by <span class="id-color">Torben</span></div>
+                            <div class="col-md-6">&copy; Copyright 2023 - Seaside Hotel by <span class="id-color">Designesia</span></div>
                             <div class="col-md-6 text-right">
                                 <div class="social-icons">
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
@@ -285,24 +290,7 @@
     ================================================== -->
         <script src="js/plugins.js"></script>
         <script src="js/designesia.js"></script>
-        
-        <script>
-            document.getElementById('send_message').addEventListener('click', function() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
-        
-                const whatsappMessage = `Contact Form Submission:\n\n` +
-                                        `Name: ${name}\n` +
-                                        `Email: ${email}\n` +
-                                        `Phone: ${phone}\n\n` +
-                                        `Message:\n${message}`;
-        
-                const whatsappURL = `https://api.whatsapp.com/send?phone=542216062309&text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappURL, '_blank');
-            });
-        </script>
+        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
         <script src="form.js"></script>
 
     </body>
