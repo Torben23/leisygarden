@@ -29,7 +29,7 @@
                 <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                 <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
             </div>
-            <span><a href="#">Book Now</a></span>
+            <span><a href="booking.html">Book Now</a></span>
         </div>
         <!-- float text close --> 
         
@@ -176,7 +176,7 @@
                                             <input type="text" id="date-picker" class="form-control" name="date" value="">
                                 
                                             <div class="guests-n-rooms">
-                                                <div class="row">
+                                                
                                                     <div class="col-md-6 guests-n-rooms-flex">
                                                         <h4>Adult</h4>
                                                         <div class="de-number">
@@ -193,7 +193,7 @@
                                                             <span class="d-plus">+</span>
                                                         </div>
                                                     </div>                                                    
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -243,6 +243,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                                               
                                 
                                 <div id='success_message' class='success'>Your reservation has been sent successfully.</div>
                                 <div id='error_message' class='error'>Sorry, error occured this time sending your message.</div>
@@ -282,12 +283,12 @@
 
         <!-- Javascript Files
     ================================================== -->
+         
         <script>
             document.getElementById('send_message').addEventListener('click', function() {
                 const date = document.getElementById('date-picker').value;
                 const adults = document.getElementById('adult-count').value;
                 const children = document.getElementById('children-count').value;
-                const rooms = document.getElementById('room-count').value;
                 const roomType = document.getElementById('room-type').value;
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
@@ -298,7 +299,6 @@
                                         `Date: ${date}\n` +
                                         `Adults: ${adults}\n` +
                                         `Children: ${children}\n` +
-                                        `Rooms: ${rooms}\n` +
                                         `Room Type: ${roomType}\n\n` +
                                         `Contact Information:\n` +
                                         `Name: ${name}\n` +
@@ -310,6 +310,7 @@
                 window.open(whatsappURL, '_blank');
             });
         </script>
+
         <script src="js/plugins.js"></script>
         <script src="js/designesia.js"></script>        
         <script src="form.js"></script>

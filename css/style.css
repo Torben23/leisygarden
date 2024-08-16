@@ -6513,8 +6513,19 @@ footer.style-2 {
   height: 32px;
 }
 
+.guests-n-rooms{
+  display: flex;
+}
+
 .guests-n-rooms .d-col{
   position: relative;
+}
+
+@media (max-width: 480px) {
+  .guests-n-rooms{
+    display: flex;
+    justify-content: space-around;
+}
 }
 
 .guests-n-rooms-flex{
